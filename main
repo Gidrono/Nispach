@@ -3,6 +3,10 @@ from docx.shared import Inches
 from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
+import os
+import win32com.client
+import re
+
 path = r'C:\Users\User\Desktop\python\mypython\newfold\''
 number_of_files = int(input('כמה נספחים יש? '))
 filesnum = list(range(1, (number_of_files+1)))
@@ -27,9 +31,6 @@ for file in filesnum:
     filepath = path + filex
     document.save(filepath)
 
-import os
-import win32com.client
-import re
 path = (r'C:\Users\User\Desktop\python\mypython\newfold')
 word_file_names = []
 word = win32com.client.Dispatch('Word.Application')
